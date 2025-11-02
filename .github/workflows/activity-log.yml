@@ -1,18 +1,17 @@
-name: Generate Activity Log
+name: Update README with Recent Activity
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Update README
+    permissions:
+      contents: write 
     steps:
-      - uses: actions/checkout@v3
-      - uses: TheDanniCraft/activity-log@v2
-        with:
+      - uses: actions/checkout@v4
+      - uses: jamesgeorge007/github-activity-readme@master
+        env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          LIMIT: 10
-          SHOW_PRIVATE: "true"
