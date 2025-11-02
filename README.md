@@ -1,7 +1,5 @@
 # DevOps Assignment: Automated GitHub Pages Deployment
 
-[![Update README with Recent Activity](https://github.com/kaigiii/devops-pages-lab/actions/workflows/activity-log.yml/badge.svg)](https://github.com/kaigiii/devops-pages-lab/actions/workflows/activity-log.yml)
-
 This project demonstrates a complete CI/CD pipeline for deploying a static website with auto-generated content using GitHub Pages and GitHub Actions. It fulfills the requirements for the DevOps course assignment, with additional enhancements to achieve an 'O' (Outstanding) level of quality.
 
 ---
