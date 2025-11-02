@@ -1,0 +1,19 @@
+name: Update README with Recent Activity
+
+on:
+  schedule:
+    # Runs every hour
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Update README
+    steps:
+      - uses: actions/checkout@v3
+      - uses: TheDanniCraft/activity-log@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          LIMIT: 10
+          SHOW_PRIVATE: "true"
